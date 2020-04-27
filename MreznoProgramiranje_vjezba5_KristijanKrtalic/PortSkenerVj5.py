@@ -20,7 +20,7 @@ end =input(" Unesite Zavrsni port >> ")
 print ("Skeniranje unesenog hosta: %s, IP adrese: %s" % (target, targetIP))
 
 try:
-    for port in range(int(start),int(end)):  
+    for port in range(int(start),int(end)+1):  
         sock = socket.socket()
         result = sock.connect_ex((targetIP, port))
         if result == 0:
